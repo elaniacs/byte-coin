@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -97,10 +96,15 @@
                             <constraint firstItem="ct2-jk-pgH" firstAttribute="bottom" secondItem="CjI-yV-vnC" secondAttribute="bottom" id="tCZ-GN-qxe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bitcoinLabel" destination="Ocx-jo-FtC" id="aWs-Of-Wct"/>
+                        <outlet property="currencyLabel" destination="MAn-y0-nXv" id="rQx-Uw-MaO"/>
+                        <outlet property="currencyPicker" destination="ct2-jk-pgH" id="cka-LX-1iA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="118"/>
+            <point key="canvasLocation" x="7" y="46"/>
         </scene>
     </scenes>
     <resources>
