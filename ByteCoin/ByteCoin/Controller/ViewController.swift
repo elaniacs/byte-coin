@@ -38,7 +38,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     /* called every time the user scrolls the picker, recording the number of the line that was selected. */
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print(coinManager.currencyArray[row])
+        
+        let selectedCurrency = coinManager.currencyArray[row]
+        coinManager.getCoinPrice(for: selectedCurrency)
     }
 }
 
