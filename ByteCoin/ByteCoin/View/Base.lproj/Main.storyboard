@@ -97,7 +97,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="bitcoinLabel" destination="Ocx-jo-FtC" id="aWs-Of-Wct"/>
+                        <outlet property="bitcoinLabel" destination="N2a-Ax-iRV" id="Q8P-qa-vZQ"/>
                         <outlet property="currencyLabel" destination="MAn-y0-nXv" id="rQx-Uw-MaO"/>
                         <outlet property="currencyPicker" destination="ct2-jk-pgH" id="cka-LX-1iA"/>
                     </connections>

@@ -10,7 +10,7 @@ import Foundation
 
 protocol CoinManagerDelegate {
 
-    func didUpdateCoin(_ coinManager: CoinManager)
+    func didUpdateCoin(_ coinData: CoinData)
     func didFailWithError(error: Error)
 }
 
@@ -43,7 +43,7 @@ struct CoinManager {
                 }
                 if let safeData = data {
                     if let coinResult = self.parseJSON(safeData){
-                        print(coinResult.rate)
+                        delegate?.didUpdateCoin(coinResult)
                     }
                 }
             }
