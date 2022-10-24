@@ -41,14 +41,27 @@ struct CoinManager {
                     self.delegate?.didFailWithError(error: error!)
                     return
                 }
-                if let safeData = data, let response = String(data: safeData, encoding: .utf8) {
-                    print(response)
+                if let safeData = data {
+                    if let coinResult = self.parseJSON(safeData){
+                        print(coinResult.rate)
+                    }
                 }
             }
             
             //4. Start the task
             task.resume()
-            
+        }
+    }
+    
+    func parseJSON(_ coinData: Data) -> CoinData? {
+        let decoder = JSONDecoder()
+        do {
+            let decodeData = try decoder.decode(CoinData.self, from: coinData)
+            return decodeData
+        }
+        catch {
+            print(error)
+            return nil
         }
     }
 }

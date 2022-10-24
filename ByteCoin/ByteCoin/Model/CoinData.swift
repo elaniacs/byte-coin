@@ -9,11 +9,10 @@ import Foundation
 
 
 struct CoinData: Codable {
-    let rates: Rates
-}
-
-struct Rates: Codable {
     let rate: Double
 }
+
+
+
 
 
